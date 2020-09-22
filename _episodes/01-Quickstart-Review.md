@@ -31,7 +31,7 @@ $ cd ~/cases/CASENAME
 
 What is the next command to setup my case?
 ~~~
-$ ./case_setup
+$ ./case.setup
 ~~~
 {: .language-bash}
 
@@ -61,7 +61,9 @@ $ qdel JOBID
 
 >## Create a new case on your own
 > 
-> Create new fully coupled (all components active) case using 1850 CO2 concentations.  Call the case whatever you want.
+> Create new fully coupled (all components active) case
+> using 1850 CO2 concentations (B1850).
+> Call the case whatever you want.
 > Setup and build it, but do not submit it. 
 >
 {: .challenge}
