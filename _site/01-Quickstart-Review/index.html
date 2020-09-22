@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-09-15 16:03:29 -0600">
+    <meta http-equiv="last-modified" content="2020-09-21 18:16:16 -0600">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -47,7 +47,7 @@
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Software Carpentry - NCAR and CESM Introduction"/>
+    <meta name="application-name" content="Software Carpentry - CESM Quickstart Review"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
@@ -64,7 +64,7 @@
 	<![endif]-->
 
   <title>
-  CESM Workflow &ndash; NCAR and CESM Introduction
+  CESM Quickstart Review &ndash; CESM Quickstart Review
   </title>  
 
   </head>
@@ -131,16 +131,7 @@
           <ul class="dropdown-menu">
             
             
-            <li><a href="../01-Two-Models/index.html">CESM and UFS</a></li>
-            
-            
-            <li><a href="../02-CESM-Configuration/index.html">CESM Workflow</a></li>
-            
-            
-            <li><a href="../03-NCAR-Computing-Environment/index.html">The NCAR Computing Environment</a></li>
-            
-            
-            <li><a href="../04-Downloading-CESM/index.html">Downloading CESM</a></li>
+            <li><a href="../01-Quickstart-Review/index.html">CESM Quickstart Review</a></li>
             
             
             <li><a href="../05-CESM-Quickstart/index.html">CESM Quickstart</a></li>
@@ -227,19 +218,19 @@
   <div class="col-xs-1">
     <h3 class="text-left">
       
-      <a href="../01-Two-Models/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
       
     </h3>
   </div>
   <div class="col-xs-10">
     
-    <h3 class="maintitle"><a href="../">NCAR and CESM Introduction</a></h3>
+    <h3 class="maintitle"><a href="../">CESM Quickstart Review</a></h3>
     
   </div>
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../03-NCAR-Computing-Environment/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      <a href="../05-CESM-Quickstart/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
       
     </h3>
   </div>
@@ -250,7 +241,7 @@
   <div class="col-md-1">
   </div>
   <div class="col-md-10">
-    <h1 class="maintitle">CESM Workflow</h1>
+    <h1 class="maintitle">CESM Quickstart Review</h1>
   </div>
   <div class="col-md-1">
   </div>
@@ -280,7 +271,7 @@
       <strong>Questions</strong>
       <ul>
 	
-	<li><p>What is the CESM Workflow?</p>
+	<li><p>Review how to setup and run a case with CESM?</p>
 </li>
 	
       </ul>
@@ -300,23 +291,49 @@
 
 </blockquote>
 
-<p>The NCAR/CESM consists of many component models which are their own software programs.  These models talk to each other through another piece of software called a coupler. There is yet even another software system, called the Workflow.  It allows us to select various model components and configurations for our experiments.</p>
+<p>Let’s review how to setup a case with CESM
+What directory do I need to be in to setup a case?</p>
 
-<p><img src="../fig/CESMCoupling.png" alt="CESMCoupling" /></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /glade/work/kpegion/cesm2.2.1/cime/scripts
+</code></pre></div></div>
 
-<h3 id="workflow">Workflow</h3>
+<p>How do I create a case?</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./create_newcase <span class="nt">--case</span> ~/cases/CASENAME <span class="nt">--res</span> f19_g17 <span class="nt">--compset</span> COMPSET <span class="nt">--project</span> UGMU0032
+</code></pre></div></div>
 
-<p>The workflow used by CESM is called the Coupling Infrastructure for Modeling Earth (CIME).  It includes:</p>
-<ul>
-  <li>Coupling infrastructure (how do the components talk to each other)</li>
-  <li>Data and stub models (structure to allow componenets to be active or inactive)</li>
-  <li>Testing infrastructure</li>
-  <li>Python scripts and XML configuration files for the Case control system (this is what is important to us for running the model)</li>
-</ul>
+<p>What directory do I need to go to to setup my case?</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/cases/CASENAME
+</code></pre></div></div>
 
-<p><img src="../fig/CIME.png" alt="CIME" /></p>
+<p>What is the next command to setup my case?</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./case_setup
+</code></pre></div></div>
 
-<p>CIME is being used by other modeling groups, so learning how to configure and run the CESM using CIME may translate to being able to work with other models.</p>
+<p>What do I do next?</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>qcmd <span class="nt">--</span> ./case.build
+</code></pre></div></div>
+
+<p>Once the build is complete, what do I do?</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./case.submit
+</code></pre></div></div>
+
+<p>How can I check that my run is in the queue?</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>qstat <span class="nt">-u</span> username
+</code></pre></div></div>
+
+<p>What do I do if I didn’t mean to submit my run or I need to remove it from the queue?</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>qdel JOBID
+</code></pre></div></div>
+
+<blockquote class="challenge">
+  <h2 id="create-a-new-case-on-your-own">Create a new case on your own</h2>
+
+  <p>Create new fully coupled (all components active) case using 1850 CO2 concentations.  Call the case whatever you want.
+Setup and build it, but do not submit it.</p>
+
+</blockquote>
+
+<p>We now have two model experiments, our case from last week <code class="language-plaintext highlighter-rouge">b.day1.0</code> and the new case you just created.</p>
 
 
 
@@ -374,7 +391,7 @@
   <div class="col-xs-1">
     <h3 class="text-left">
       
-      <a href="../01-Two-Models/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
       
     </h3>
   </div>
@@ -384,7 +401,7 @@
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../03-NCAR-Computing-Environment/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      <a href="../05-CESM-Quickstart/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
       
     </h3>
   </div>

@@ -1,15 +1,14 @@
 ---
 title: "CESM Quickstart Review"
 teaching: 0
-exercises: 0 
+exercises: 0
 questions:
-- "Review how to setup and run cases with CESM?"
+- "Review how to setup and run a case with CESM?"
 objectives:
 keypoints:
 ---
-### Let's review how to setup a case with CESM
 
-
+Let's review how to setup a case with CESM
 What directory do I need to be in to setup a case?
 
 ~~~
@@ -43,7 +42,6 @@ $ qcmd -- ./case.build
 {: .language-bash}
 
 Once the build is complete, what do I do?
-
 ~~~
 $ ./case.submit
 ~~~
@@ -61,7 +59,7 @@ $ qdel JOBID
 ~~~
 {: .language-bash}
 
-## Create a new case on your own
+>## Create a new case on your own
 > 
 > Create new fully coupled (all components active) case using 1850 CO2 concentations.  Call the case whatever you want.
 > Setup and build it, but do not submit it. 
