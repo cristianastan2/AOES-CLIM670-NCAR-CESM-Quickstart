@@ -12,7 +12,7 @@ Let's review how to setup a case with CESM
 What directory do I need to be in to setup a case?
 
 ~~~
-$ cd /glade/work/kpegion/cesm2.2.1/cime/scripts
+$ cd /glade/work/cstan/cesm2.2.3/cime/scripts
 ~~~
 {: .language-bash}
 
