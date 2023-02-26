@@ -19,7 +19,7 @@ $ cd /glade/work/cstan/cesm2.2.3/cime/scripts
 
 How do I create a case?
 ~~~
-$ ./create_newcase --case ~/cases/CASENAME --res f19_g17 --compset COMPSET --project UGMU0032
+$ ./create_newcase --case ~/cases/CASENAME --res f19_g17 --compset COMPSET --project UGMU0041
 ~~~
 {: .language-bash}
 
