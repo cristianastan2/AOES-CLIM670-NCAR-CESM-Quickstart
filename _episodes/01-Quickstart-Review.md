@@ -12,14 +12,14 @@ Let's review how to setup a case with CESM
 What directory do I need to be in to setup a case?
 
 ~~~
-$ cd /glade/work/cstan/cesm2.1.3/cime/scripts
+$ cd /glade/work/cstan/cesm2.1.5/cime/scripts
 ~~~
 {: .language-bash}
 
 
 How do I create a case?
 ~~~
-$ ./create_newcase --case ~/cases/CASENAME --res f19_g17 --compset COMPSET --project UGMU0041
+$ ./create_newcase --case ~/cases/CASENAME --res f19_g17 --compset COMPSET --project UGMU0049
 ~~~
 {: .language-bash}
 
