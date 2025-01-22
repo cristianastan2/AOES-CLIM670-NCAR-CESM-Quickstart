@@ -49,7 +49,7 @@ $ ./case.submit
 
 How can I check that my run is in the queue?
 ~~~
-$ qstat -u username
+$ qstat -u $USER
 ~~~
 {: .language-bash}
 
