@@ -37,7 +37,7 @@ $ ./case.setup
 
 What do I do next?
 ~~~
-$ qcmd -- ./case.build
+$ qcmd -A UGMU0049 -- ./case.build
 ~~~
 {: .language-bash}
 
